@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- End FontAwesome -->
+	<title>Welcome</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			width: 100%;
+			height: 100vh;
+		}
+		.transaction .content{
+			background: #ccc;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.transaction .btn-primary{
+			background: #7265C5!important;
+			border: 2px solid #7265C5!important;
+		}
+		.transaction .btn-primary:hover{
+			background: transparent!important;
+			color: #7265C5!important;
+		}
+		.transaction .partSearch{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+		}
+		.transaction .partSearch button{
+			width: 16%!important;
+		}
+		.transaction .partSearch img{
+			position: absolute;
+			right: 3%;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 20px;
+			height: 20px;
+		}
+		.transaction .partSearch button{
+			position: relative;
+			background: #EEEEEE!important;
+			color: #4B5258!important;
+			border-color: #4B5258!important;
+		}
+		.transaction .partSearch button:hover{
+			color: #4B5258!important;
+		}
+		.transaction .partSearch button i{
+			width: 8px;
+			height: 8px;
+			position: absolute;
+			right: 10%;
+			top: 40%;
+			transform: translateY(-50%);
+		}
+		.transaction .input-group{
+			width: 65%!important;
+		}
+
+		.transaction table{
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: 0;
+			background: #FFFFFF;
+			box-sizing: border-box;
+			box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06);
+			border-radius: 6px;
+			border-collapse: collapse;
+
+		}
+
+		.transaction tbody tr, thead tr { display: block; width: 100%;}
+		.button{
+		   width: 14px;
+		   height: 6px;
+
+		}
+
+		.transaction tr{
+			margin-bottom: 5px;
+		    height: 45px;
+			background: #F9F9F9;
+			border: 0.7px solid #809CCD;
+			box-sizing: border-box;
+			border-radius: 5px;
+			padding: 10px;
+			color: rgba(3, 3, 37, 0.86);
+
+		}
+		.transaction th{
+			height:40px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		.transaction th,td{
+			font-style: normal;
+			font-size: 14px;
+			line-height: 21px;
+			text-align: center;
+			color: rgba(26, 26, 52, 0.79);
+			text-align: center!important;
+			width: 4%!important;
+		}
+
+
+		::-webkit-scrollbar {
+		    width: 6px;
+		} 
+		::-webkit-scrollbar-track {
+		    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) ;
+		    background: #F0EFEF;
+
+		} 
+		::-webkit-scrollbar-thumb {
+		    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		    background: #809CCD; 
+		}
+	</style>
+</head>
+<body>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+		<div class="container transaction">
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			    <div class="container">
+			      <div>
+			      	 <h3>Transaction List</h3>
+			     	 <p>154 Items</p>
+			      </div>
+			      <button class="btn btn-primary">Add Item</button>
+			    </div>
+		  </nav>
+		  	<div class="partSearch">
+		  		<div class="input-group mb-3 mt-3">
+				  <input type="text" class="form-control" placeholder="Recipient's username" >
+				  <img src="img/Group 2019(1).png">
+				</div>
+				<button class="btn btn-primary">Filter by<i class="fas fa-chevron-down"></i></button>
+				<button class="btn btn-primary">Sort by<i class="fas fa-chevron-down"></i></button>
+		  	</div>
+		  	<div style="width: 100%;height: 500px; position: relative;">
+		  		<table>
+				  <thead>
+				    <tr>
+				      <th scope="col">id</th>
+				      <th scope="col">name</th>
+				      <th scope="col">Montant</th>
+				      <th scope="col">espace</th>
+				      <th scope="col">cheque</th>
+				      <th scope="col">Date</th>
+				      <th scope="col">options</th>
+
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				        <td data-label="Due Date">1</td>
+				        <td data-label="Due Date">SALAH</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">27 jun 2020</td>
+				        <td class='select'><i class="fas fa-chevron-down"></i></td>
+				    </tr>
+				    <tr>
+				        <td data-label="Due Date">1</td>
+				        <td data-label="Due Date">SALAH</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">27 jun 2020</td>
+				        <td class='select'><i class="fas fa-chevron-down"></i></td>
+				    </tr>
+				    <tr>
+				        <td data-label="Due Date">1</td>
+				        <td data-label="Due Date">SALAH</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">27 jun 2020</td>
+				        <td class='select'><i class="fas fa-chevron-down"></i></td>
+				    </tr>
+				    <tr>
+				        <td data-label="Due Date">1</td>
+				        <td data-label="Due Date">SALAH</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">27 jun 2020</td>
+				        <td class='select'><i class="fas fa-chevron-down"></i></td>
+				    </tr>
+				    <tr>
+				        <td data-label="Due Date">1</td>
+				        <td data-label="Due Date">SALAH</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">27 jun 2020</td>
+				        <td class='select'><i class="fas fa-chevron-down"></i></td>
+				    </tr>
+				    <tr>
+				        <td data-label="Due Date">1</td>
+				        <td data-label="Due Date">SALAH</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">27 jun 2020</td>
+				        <td class='select'><i class="fas fa-chevron-down"></i></td>
+				    </tr>
+				    <tr>
+				        <td data-label="Due Date">1</td>
+				        <td data-label="Due Date">SALAH</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">27 jun 2020</td>
+				        <td class='select'><i class="fas fa-chevron-down"></i></td>
+				    </tr>
+				    <tr>
+				        <td data-label="Due Date">1</td>
+				        <td data-label="Due Date">SALAH</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">27 jun 2020</td>
+				        <td class='select'><i class="fas fa-chevron-down"></i></td>
+				    </tr>
+				    <tr>
+				        <td data-label="Due Date">1</td>
+				        <td data-label="Due Date">SALAH</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">27 jun 2020</td>
+				        <td class='select'><i class="fas fa-chevron-down"></i></td>
+				    </tr>
+				    <tr>
+				        <td data-label="Due Date">1</td>
+				        <td data-label="Due Date">SALAH</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">$1,190</td>
+				        <td data-label="Amount">27 jun 2020</td>
+				        <td class='select'><i class="fas fa-chevron-down"></i></td>
+				    </tr>
+				    
+				  
+				  </tbody>
+				</table>
+		  	</div>
+		</div>
+
+
+
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+</html>

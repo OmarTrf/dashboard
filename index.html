@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- FontGoogle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"> 
+    <!-- Start FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- End FontAwesome -->
+    <!-- START Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!--	END Bootstrap -->
+	<title>Welcomme</title>
+	<script src='./eel.js'></script>
+	<script src='script.js'></script>
+</head>
+<body>
+	<div class="side-bar">
+		<h2>AZAYER</h2>
+		<p>.ma</p>
+	
+		<div class="menu">
+			<div class="item">
+				<a href="#" id="homeb"><i class='fa fa-dashboard'></i></i>Dashboard</a>
+			</div>
+
+			<div class="item">
+				<a href="#" id="prodb"><i class="fab fa-product-hunt"></i>Products</a>
+			</div>
+
+			<div class="item">
+				<a class="sub-btn">Clients<i class="fas fa-angle-right dropdown"></i></a>
+				<div class="sub-menu">
+					
+					<div>
+						<a href="#" id="transb"><i class="fas fa-file-invoice-dollar"></i>Transactions</a>
+					</div>
+					<div>
+						<a href="#" id="cltsb"><i class="fa-solid fa-user-group"></i>Clients</a>
+					</div>
+					<div>
+						<a href="#" id="fctb"><i class="fa-solid fa-file-lines"></i>Factures</a>
+					</div>
+				</div>
+			</div>
+
+		    <div class="item">
+				<a class="sub-btn">Fournissurs<i class="fas fa-angle-right dropdown"></i></a>
+				<div class="sub-menu">
+					<div><a href="#"><i class="fas fa-file-invoice-dollar"></i>Transactions</a></div>
+					<div><a href="#"><i class="fa-solid fa-user-group"></i>Clients</a></div>
+					<div><a href="#"><i class="fa-solid fa-file-lines"></i>Factures</a></div>
+				</div>
+			</div>	
+		</div>	
+	</div>
+	<!--START HOME DASHBOARD-->
+		<div class="container home" id="home" style="display:block;">
+			<nav>
+				<h2>Dashboard</h2>
+				<div class="menu">
+					<h3>10:35:01</h3>
+					<div>
+						<img src="img/notification.png">
+					</div> 
+					<button id="addf">Add Facture</button>
+				</div>
+			</nav>
+			<!--  -->
+			<div class="top_dashboard">
+				<h2>Hello mohamed</h2>
+				<p>Welcomme Back</p>
+				<div class="dash">
+					<div>
+						<div class="desc">
+							<h3>Sales</h3>
+							<p>5757</p>
+						</div>
+						<div>
+							<img src="img/Group 2311(1).png">
+						</div>
+					</div>
+					<div>
+						<div class="desc">
+							<h3>Client</h3>
+							<p>5757</p>
+						</div>
+						<div>
+							<img src="img/Group 2308.png">
+						</div>
+					</div>
+					<div>
+						<div class="desc">
+							<h3>Products</h3>
+							<p>5757</p>
+						</div>
+						<div>
+							<img src="img/Group 2420.png">
+						</div>
+					</div>
+					<div>
+						<div class="desc">
+							<h3>Transactions</h3>
+							<p>5757</p>
+						</div>
+						<div>
+							<img src="img/Group 2421(1).png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="analytics">
+				<div class="dash-analytics">
+					<h2>Analytics</h2>
+					 <div class="chartSect">
+			                <div class="nav-chart">
+			                    <button id="c1">Sales</button>
+			                    <button id="c1">Clients</button>
+			                    <button id="c3">Fournisseur</button>
+			                    <button id="c4">transactions</button>
+			                    <button id="c5">Products</button>
+			                </div>
+			                <!-- Chart Goes Here -->
+			                <div class="chart-cont">
+			                    <canvas id="myChart"></canvas>
+			                </div>
+	            	</div>
+				</div>
+				<div class="last-transactions">
+					<h2>Last transactions</h2>
+					<div>
+						<div class="search">
+							<input type="text" name="search" placeholder="Search on Transactions By name">
+							<img src="img/Group 2019.png">
+						</div>
+						<table>
+							  <thead>
+								    <tr>
+								      <th scope="col">client</th>
+								      <th scope="col">Montant</th>
+								      <th scope="col">date</th>
+								      <th scope="col">more</th>
+								    </tr>
+							  </thead>
+							  <tbody id="tb_frontfct">
+							  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--END HOME DASHBOARD-->
+	<!--START Transaction List-->
+		<div class="container transaction" id="trans" style="display:none;">
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			    <div>
+			      <div>
+			      	 <h3>Transaction List</h3>
+			     	 <p>154 Items</p>
+			      </div>
+			      <button class="btn btn-primary">Add Item</button>
+			    </div>
+		  </nav>
+		  	<div class="partSearch">
+		  		<div class="input-group mb-3 mt-3">
+				  <input type="text" class="form-control" placeholder="Recipient's username" >
+				  <img src="img/Group 2019(1).png">
+				</div>
+				<button class="btn btn-primary">Filter by<i class="fas fa-chevron-down"></i></button>
+				<button class="btn btn-primary">Sort by<i class="fas fa-chevron-down"></i></button>
+		  	</div>
+		  	<div style="width: 100%;height: 500px; position: relative;top: 3%;">
+		  		<table>
+				  <thead>
+				    <tr>
+				      <th scope="col">id</th>
+				      <th scope="col">name</th>
+				      <th scope="col">Montant</th>
+				      <th scope="col">espace</th>
+				      <th scope="col">cheque</th>
+				      <th scope="col">Date</th>
+				    </tr>
+				  </thead>
+				  <tbody id="tb_trans">
+				 
+				  </tbody>
+				</table>
+		  	</div>
+		</div>
+	<!--END Transaction List-->
+	<!--START Product List-->
+		<div class="container transaction" id="prod" style="display:none;">
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			    <div>
+			      <div>
+			      	 <h3>Product List</h3>
+			     	 <p>154 Items</p>
+			      </div>
+			      <button class="btn btn-primary">Add Product</button>
+			    </div>
+		  </nav>
+		  	<div class="partSearch">
+		  		<div class="input-group mb-3 mt-3">
+				  <input type="text" class="form-control" placeholder="Recipient's username" >
+				  <img src="img/Group 2019(1).png">
+				</div>
+				<button class="btn btn-primary">Filter by<i class="fas fa-chevron-down"></i></button>
+				<button class="btn btn-primary">Sort by<i class="fas fa-chevron-down"></i></button>
+		  	</div>
+		  	<div style="width: 100%;height: 500px; position: relative;top: 3%;">
+		  		<table>
+				  <thead>
+				    <tr>
+				      <th scope="col">id</th>
+				      <th scope="col">name</th>
+				      <th scope="col">Montant</th>
+				      <th scope="col">espace</th>
+				      <th scope="col">cheque</th>
+				      <th scope="col">Date</th>
+				    </tr>
+				  </thead>
+				  <tbody id="tb_trans">
+				 
+				  </tbody>
+				</table>
+		  	</div>
+		</div>
+	<!--END Product List-->
+	
+	<!-- START NEW FACTURE -->
+		<div class="big_reglement" style="display:none;" id="fct">
+			<i class="fa-solid fa-xmark close"></i>
+				<div class="new-facture">
+				   <div class="container">
+					   <div class="heading">
+						   <h1>Create New Facture</h1>
+						   <p id="frm-hlp">Fill This Form To Add New Facture</p>
+					   </div>
+					   <!--  -->
+					   <div class="inputBox">
+						 <div class="form-group">
+								<div class="autocomplete">
+
+							 <label for="exampleInputEmail1">Client Name</label>
+							 <input type="text" class="form-control" id="enter_name" aria-describedby="emailHelp" placeholder="Enter The Name of The Client">
+							</div>
+							</div>
+						 <button id="jlibene" class="plus_fact">+</button>
+					   </div>
+					   <!--  -->
+					   <table class="table">
+						   <thead class="thead-dark">
+							 <tr id="head-table">
+							   <th scope="col">Product</th>
+							   <th scope="col">Quantité</th>
+							   <th scope="col">HTTC</th>
+							   <th scope="col">TTC</th>
+							 </tr>
+						   </thead>
+						   <tbody id='tb_prod'></tbody>
+				 </table>
+				 <button class="send" id="sendj">SEND</button>          
+				  <div class="desc">
+				  	<p>Total HT: <span id='tot_ht'></span></p>
+				 	<p>Total TTC: <span id='tot_ttc'></span></p>
+				 </div>
+				 	
+
+
+
+
+				   </div>
+			   </div>
+		</div>
+	<!-- END NEW FACTURE -->
+	<!--START CLIENT List-->
+		<div class="container transaction client" id="clts" style="display:none;">
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			    <div>
+			      <div>
+			      	 <h3>Clients List</h3>
+			     	 <p>104 Items</p>
+			      </div>
+			      <button class="btn btn-primary">Add Item</button>
+			    </div>
+		  </nav>
+		  	<div class="partSearch">
+		  		<div class="input-group mb-3 mt-3">
+				  <input type="text" class="form-control" placeholder="Recipient's username" >
+				  <img src="img/Group 2019(1).png">
+				</div>
+				<button class="btn btn-primary">Filter by<i class="fas fa-chevron-down"></i></button>
+				<button class="btn btn-primary">Sort by<i class="fas fa-chevron-down"></i></button>
+		  	</div>
+		  	<div style="width: 100%;height: 500px; position: relative;top: 3.5%;">
+		  		<table>
+				  <thead>
+				    <tr>
+				      <th scope="col">id</th>
+				      <th scope="col">name</th>
+				      <th scope="col">Montant</th>
+				      <th scope="col">espace</th>
+				      <th scope="col">cheque</th>
+				      <th scope="col">Date</th>
+				    </tr>
+				  </thead>
+				  <tbody id="tb_clts">
+				 
+				  </tbody>
+				</table>
+		  	</div>
+		</div>
+	<!--END CLIENT List-->
+	<!-- START REGELEMENT -->
+	 <div class="big_reglement" style="display:none;" id='regl'>
+	 	<i class="fa-solid fa-xmark close"></i>
+	 	<div class="facture-card reglement">
+            <div class="container">
+                <div class="heading">
+                    <h1>Réglement</h1>
+                    <p id="frm-hlp">Chiffre : <input type="number" id="rg_mt" disabled value=33400></p>
+                </div>
+                <!--  -->
+                <div class="inputBox mt-2">
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Montant Espece</label>
+                      <input type="number" class="form-control" id="rg_es" aria-describedby="emailHelp" placeholder="Enter Montant DH">
+                  </div>
+                  <button id="sdam">+</button>
+                </div>
+                <!--  -->
+                <p id="frm-hlp" class="mb-4">Reste : <input type="number" id="rg_mt" disabled value=33400></p>
+               <table class="table table-striped table-hover">
+                  <thead>
+                      <tr>
+                          <th>Photo</th>
+                          <th>Date</th>
+                          <th>Montant</th>
+                      </tr>
+                  </thead>
+                  <tbody id="chit"></tbody>
+                </table>
+                <button class="send" id="sdas">SEND</button>          
+            </div>
+     </div>
+	 </div>
+	<!-- END REGELEMENT -->
+	<!-- START CHEQUE -->
+	     <div class="big_reglement" style="display:none;" id="chqs">
+	        <i class="fa-solid fa-xmark close"></i>
+	        <div class="facture-card reglement cheque">
+	            <div class="container">
+	                <!--  -->
+	                 <div class="aveen">
+	                  <table class="table">
+	                    <thead>
+	                      <tr>
+	                        <th>id</th>
+	                        <th>id Cheque</th>
+	                        <th>Date Payment</th>
+	                        <th>MTT</th>
+	                        <th>AVANCE</th>
+	                        <th>MTT IMPAYE</th>
+	                        <th>ETAT</th>
+	                        <th>DATE DE RECEPT</th>
+	                      </tr>
+	                    </thead>
+	                    <tbody id="tb_chqs">  
+	                      
+	     
+	                    
+	                    
+	                    </tbody>
+	                  </table>
+	                </div>
+	            </div>
+	        </div>
+	     </div>
+    <!-- END CHEQUE -->
+	<!-- START AVANCE -->
+
+		<div class="big_reglement" style="display:none;" id="av">
+				<i class="fa-solid fa-xmark close"></i>
+				<div class="facture-card reglement avance">
+				   <div class="container">
+					   <div class="heading">
+						   <h1>Cheque 5</h1>
+					   </div>
+					   <!--  -->
+						  <div class="table-responsive" style="position: absolute;top:20%;height: 100%;width:100%;left: 0;"> 
+							   <table class="table table-bordered table-hover">
+								 <thead class="thead-dark">
+								   <tr class="table-danger">
+									 <th scope="col">NUM</th>
+									 <th scope="col">ID CHEQUE</th>
+									 <th scope="col">MONTANT</th>
+									 <th scope="col">DATE</th>
+								   </tr>
+								 </thead>
+								 <tbody id="tb_av"></tbody>
+							   </table>
+						   </div> 
+				   </div>
+				</div>
+		</div>
+	<!-- END AVANCE -->
+	<!--START ADD PRODUCT -->
+		<div class="big_reglement add_product" style="display:;" id="">
+				<i class="fa-solid fa-xmark close"></i>
+				<div class="facture-card reglement avance">
+				   <div class="container">
+					   <!--  -->
+						  <div id="add_product">
+							<div class="card text-center">
+							  <div class="card-header">
+							    <h2>Add product</h2>
+								<p>You can add product</p>
+							  </div>
+							  <div class="card-body">
+									<form>
+									  <div class="form-group">
+									    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Product Name">
+									  </div>
+									  <div class="form-group">
+									    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Quantite">
+									  </div>
+									 <div class="row">
+									    <div class="col">
+									      <input type="number" class="form-control" placeholder="prix d'achat">
+									    </div>
+									    <div class="col">
+									      <input type="number" class="form-control" placeholder="prix de vente">
+									    </div>
+									 </div>
+									 <div class="row">
+									    <div class="col">
+									      <input type="number" class="form-control" placeholder="prix d'achat">
+									    </div>
+									    <div class="col">
+									      <input type="number" class="form-control" placeholder="prix de vente">
+									    </div>
+									 </div>
+									  <button type="submit" class="btn btn-primary w-100">Submit</button>
+									</form>
+							  </div>
+							</div>	
+						</div>
+				   </div>
+				</div>
+			</div>
+	<!--END ADD PRODUCT -->
+
+			<div class="big_reglement partition" style="display:none;" id="part">
+					<i class="fa-solid fa-xmark"></i>
+					<div class="facture-card reglement">
+					   <div class="container">
+						   <div class="heading">
+							   <h1>Partition</h1>
+							   <p id="">Montant : <span id="mt_part"></span></p>
+						   </div>
+						   <!--  -->
+						   <div class="inputBox">
+							 <div class="form-group">
+								 <label for="exampleInputEmail1">Montant Espece</label>
+								 <input type="number" class="form-control" id="chid" aria-describedby="emailHelp" placeholder="0">
+							 </div>
+							 <button id="sdame">+</button>
+						   </div>
+						   <p>Reste : <span id="chrest">34300 dh</span></p>
+						   <!--  -->
+						  <table class="table table-striped table-hover">
+							 <thead>
+								 <tr>
+									 <th>Photo</th>
+									 <th>Date</th>
+									 <th>Montant</th>
+								 </tr>
+							 </thead>
+							 <tbody id="chite"></tbody>
+						   </table>
+						   <button class="send" id="sendp">SEND</button>          
+					   </div>
+				</div>
+				</div>
+	<!-- START USER -->
+		<div class="blur">
+			<i class="fa-solid fa-xmark close"></i>
+			<div class="user">
+				<div id="part_left">
+					<div id="heading">
+						<div id="heading_left">
+							<img src="img/user.png">
+						</div>
+						<div id="heading_right">
+							<div class="user_info">
+								<h4>Name : <span>lolo</span></h4>
+							</div>
+							<div class="user_info">
+								<h4>Email : <span>lolo@lolo.lolo</span></h4>
+							</div>
+							<div class="user_info">
+								<h4>Number : <span>06.45.23.53.23</span></h4>
+							</div>
+							<div class="user_info">
+								<h4>Chiffre : <span>1234</span></h4>
+							</div>
+							<div class="user_info">
+								<h4>Adresse : <span>agadir/lolo rue lolo 123</span></h4>
+							</div>
+						</div>
+						<div id="chiffre">
+							<div class="user_info">
+								<h4>Chiffre TTC: <span>12334</span></h4>
+							</div>
+							<div class="user_info">
+								<h4>Chiffre TTV : <span>3333</span></h4>
+							</div>
+							<div class="user_info">
+								<h4>Chiffre Total : <span>5123</span></h4>
+							</div>
+						</div>
+					</div>
+					<div id="body_user">
+						<div id="user-card">
+				            <h3>Analytics</h3>
+				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				            quis nostrud exercitation ullamco laboris.</p>
+				            <div class="chartSect">
+				                <div class="nav-chart">
+				                    <button id="sales-chart">Sales</button>
+				                    <button id="clients-chart">Clients</button>
+				                    <button id="fournisseur-chart">Fournisseur</button>
+				                    <button id="transactions-chart">transactions</button>
+				                    <button id="products-chart">Products</button>
+				                </div>
+				                <!-- Chart Goes Here -->
+				                <div class="chart-cont">
+				                    <canvas id="myChart2"></canvas>
+				                </div>
+				            </div>
+				        </div>
+					</div>
+				</div>
+				<div id="part_right">
+					<table class="table">
+					  <thead class="thead-light">
+					    <tr>
+					      <th scope="col">id</th>
+					      <th scope="col">First</th>
+					      <th scope="col">Last</th>
+					      <th scope="col">Handle</th>
+					      <th scope="col">Handle</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td>1</td>
+					      <td>Mark</td>
+					      <td>Otto</td>
+					      <td>@mdo</td>
+					      <td>@mdo</td>
+					    </tr>
+					    <tr>
+					      <td>2</td>
+					      <td>Jacob</td>
+					      <td>Thornton</td>
+					      <td>@fat</td>
+					      <td>@fat</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>Larry</td>
+					      <td>the Bird</td>
+					      <td>the Bird</td>
+					      <td>@twitter</td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	<!-- END USER -->
+	<div id="choice" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:rgba(100,100,100,0.7); z-index:12000; display:none;">
+				<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);">
+				  <button id="yes" onclick=" validate('yes');document.getElementById('choice').style.display='none'; updateall() " style="background-color:green;width:150px;height:50px;">CONFIRM</button>
+				  <button id="no" onclick="validate('no');document.getElementById('choice').style.display='none' ; updateall()" style='background-color:red;width:150px;height:50px;'>CANCEL</button>
+				</div>
+			  </div>
+
+<!-- SCRIPT -->
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.sub-btn').click(function(){
+				$(this).next('.sub-menu').slideToggle();
+				$(this).find('.dropdown').toggleClass('rotate');
+
+			});
+
+			$('.menu-btn').click(function(){
+				$('.side-bar').addClass('active');
+			});
+		});
+
+		// Desfine The Chart Section Place
+		// button close
+        const btn_close = document.querySelectorAll('.close');
+        for(var i=0;i<btn_close.length;i++){
+            btn_close[i].addEventListener('click',function(){
+                this.parentElement.style.display = "none";
+            })
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        // USER
+        // Desfine The Chart Section Place
+		var myChartSection = document.getElementById("myChart2");
+		const labels = [
+		    'January',
+		    'February',
+		    'March',
+		    'April',
+		    'May',
+		    'June',
+		];
+
+		const data = {
+		    labels: labels,
+		    datasets: [{
+		      label: 'Sales',
+		      backgroundColor: '#422F8A',
+		      borderColor: '#422F8A',
+		      borderWidth:4,
+		      data: [0, 10, 30, 20, 20, 30, 45],
+		    },{
+		        label: 'Clients',
+		        backgroundColor: '#BEB1D5',
+		        borderColor: '#BEB1D5',
+		        borderWidth:4,
+		        data: [0, 70, 50, 20, 45, 20, 30],
+		    }]
+		};
+		//  Setup The Config of Chart 
+		const config = {
+		    type: 'line',
+		    data: data,
+		    options: {}
+		};
+		// Add Chart to The Chart Section
+		const myChart = new Chart(myChartSection,config);
+	</script>
+	 
+</body>
+</html>
